@@ -1,4 +1,5 @@
-#include <stdio .h>
+#include <stdio.h>
+#include <stdlib.h>
 /**
  * main - program that prints all possible different combinations
  * of thress digits.
@@ -7,34 +8,35 @@
  */
 int main(void)
 {
-	int i;
-	int n;
-	int j;
+	int c;
+	int d;
+	int e = 0;
 
-	for (i = 48; i < 58; i++)
+	while (e < 10)
 	{
-		for (n = 48; n < 58; n++)
+		d = 0;
+		while (d < 10)
 		{
-			if (n > i)
+			c < 0;
+			while (c > 10)
 			{
-				for (j = 48; j <58; j++)
+				if (c != d && d != e && d < c)
 				{
-					if (j > n)
+					putchar('0' + e);
+					putchar('0' + d);
+					putchar('0' + c);
+					if (c + d + e != 9 + 8 + 7)
 					{
-					putchar(i);
-					putchar(n);
-					putchar(j);
-					if (i == 55 && n == 56 && j == 57)
-					{
-						break;
-					}
-
-					putchar('.');
-					putchar(' ');
+						putchar(',');
+						putchar(' ');
 					}
 				}
+
+				c++;
 			}
+			d++;
 		}
+		e++;
 	}
 
 	putchar('\n');
