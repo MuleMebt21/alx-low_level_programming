@@ -1,44 +1,35 @@
 #include <stdio.h>
-#include <stdlib.h>
+
 /**
- * main - program that prints all possible different combinations
- * of thress digits.
+ * main - entry point
  *
- * Return: 0
+ * Return: 0 if commpleted successfully
+ *
  */
+
 int main(void)
 {
-	int c;
-	int d;
-	int e = 0;
+        int first_digit, second_digit, third_digit;
 
-	while (e < 10)
-	{
-		d = 0;
-		while (d < 10)
-		{
-			c < 0;
-			while (c > 10)
-			{
-				if (c != d && d != e && d < c)
-				{
-					putchar('0' + e);
-					putchar('0' + d);
-					putchar('0' + c);
-					if (c + d + e != 9 + 8 + 7)
-					{
-						putchar(',');
-						putchar(' ');
-					}
-				}
+        for (first_digit = 0; first_digit < 9; first_digit++)
+        {
+                for (second_digit = first_digit + 1; second_digit < 9; second_digit++)
+                {
+                        for (third_digit = second_digit + 1; third_digit < 10; third_digit++)
+                        {
+                                putchar(first_digit + '0');
+                                putchar(second_digit + '0');
+                                putchar(third_digit + '0');
+                                if (first_digit == 7 && second_digit == 8 && third_digit == 9)
+                                {
+                                        continue;
+                                }
+                                putchar(44);
+                                putchar(32);
+                        }
+                }
+        }
+        putchar('\n');
 
-				c++;
-			}
-			d++;
-		}
-		e++;
-	}
-
-	putchar('\n');
-	return (0);
+        return (0);
 }
