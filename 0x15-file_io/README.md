@@ -1,0 +1,2 @@
+I LOVE YOU MY FIRA
+0x15. C - File I/O
